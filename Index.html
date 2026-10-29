@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cambodia M3 TV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📺 Cambodia M3 TV</h1>
+    <p>ទូរទស្សន៍ខ្មែររបស់អ្នក</p>
+  </header>
+
+  <main>
+    <section id="auth">
+      <h2>ចុះឈ្មោះអ្នកមើល</h2>
+      <form id="registerForm">
+        <input id="regName" placeholder="ឈ្មោះរបស់អ្នក" required>
+        <input id="regEmail" type="email" placeholder="Gmail របស់អ្នក" required>
+        <input id="regPassword" type="password" minlength="6"
+          placeholder="ពាក្យសម្ងាត់យ៉ាងតិច ៦ តួ" required>
+        <button type="submit">ចុះឈ្មោះ</button>
+      </form>
+
+      <hr>
+      <h2>ចូលគណនីអ្នកមើល</h2>
+      <form id="loginForm">
+        <input id="loginEmail" type="email" placeholder="Gmail" required>
+        <input id="loginPassword" type="password"
+          placeholder="ពាក្យសម្ងាត់" required>
+        <button type="submit">ចូលមើលទូរទស្សន៍</button>
+      </form>
+      <p id="authMessage" role="status"></p>
+    </section>
+
+    <section id="adminSetup" hidden>
+      <h2>បង្កើត Admin ដំបូង</h2>
+      <p>អាចបង្កើតបានតែមួយក្នុង Browser នេះ។</p>
+      <form id="setupForm">
+        <input id="adminName" value="phengchen888" readonly>
+        <input id="adminPassword" type="password"
+          minlength="8" placeholder="កំណត់ពាក្យសម្ងាត់ Admin" required>
+        <button type="submit">បង្កើត Admin</button>
+      </form>
+    </section>
+
+    <section id="adminLogin">
+      <h2>ចូល Admin</h2>
+      <form id="adminLoginForm">
+        <input id="adminLoginName" value="phengchen888"
+          placeholder="ឈ្មោះ Admin" required>
+        <input id="adminLoginPassword" type="password"
+          placeholder="ពាក្យសម្ងាត់ Admin" required>
+        <button type="submit">ចូល Admin</button>
+      </form>
+      <p id="adminMessage" role="status"></p>
+    </section>
+
+    <section id="adminPanel" hidden>
+      <h2>ផ្ទាំងគ្រប់គ្រង Admin</h2>
+      <p>គណនីដែលរង់ចាំការអនុម័ត៖</p>
+      <div id="pendingUsers"></div>
+      <button id="adminLogout" class="secondary">ចេញពី Admin</button>
+    </section>
+
+    <section id="tvPanel" hidden>
+      <h2 id="welcome"></h2>
+      <div class="player">
+        <p>បញ្ចូលតំណភ្ជាប់វីដេអូ YouTube</p>
+        <form id="videoForm">
+          <input id="videoUrl" type="url"
+            placeholder="https://www.youtube.com/watch?v=..." required>
+          <button type="submit">ចាក់វីដេអូ</button>
+        </form>
+        <div id="videoPlayer"></div>
+      </div>
+      <p id="approvalMessage"></p>
+      <button id="logout" class="secondary">ចេញពីគណនី</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Cambodia M3 TV</p>
+    <small>កំណែសាកល្បងសម្រាប់ GitHub Pages</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
